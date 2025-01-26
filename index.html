@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="garden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-base-100">
+
+    <!-- Navbar -->
+    <nav class="navbar bg-base-100 shadow-lg">
+        <div class="navbar-start">
+            <a class="btn btn-ghost text-xl font-bold">Logo</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal p-0">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Recursos</a></li>
+                <li><a href="#pricing">Preços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a href="#contact" class="btn btn-primary">Entre em Contato</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex justify-center items-center">
+        <div class="text-center text-white px-6 md:px-12">
+            <h1 class="text-5xl font-extrabold mb-4">Transforme seu Negócio com Workshops Inovadores</h1>
+            <p class="text-lg mb-6">Explore a nossa plataforma de workshops, eventos e treinamentos. Inscreva-se agora e comece a sua jornada!</p>
+            <a href="#contact" class="btn btn-primary text-xl px-6 py-3 rounded-full">Entre em contato</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-6 bg-base-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800">Recursos da Plataforma</h2>
+            <p class="mt-4 text-lg text-gray-600">Explore as funcionalidades que tornam sua experiência única.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <div class="card shadow-lg bg-white p-6 rounded-lg">
+                    <h2 class="text-2xl font-semibold text-gray-800">Fácil de Usar</h2>
+                    <p class="text-gray-600 mt-2">Interface intuitiva que qualquer pessoa pode usar.</p>
+                </div>
+                <div class="card shadow-lg bg-white p-6 rounded-lg">
+                    <h2 class="text-2xl font-semibold text-gray-800">Desempenho Rápido</h2>
+                    <p class="text-gray-600 mt-2">Otimização para carregamento e resposta rápidas.</p>
+                </div>
+                <div class="card shadow-lg bg-white p-6 rounded-lg">
+                    <h2 class="text-2xl font-semibold text-gray-800">Segurança de Dados</h2>
+                    <p class="text-gray-600 mt-2">Criptografia de ponta para proteger as informações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 px-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold">Escolha o Melhor Plano</h2>
+            <p class="mt-4 text-lg">Encontre o plano ideal para o seu negócio.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <!-- Plano Básico -->
+                <div class="card w-full bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800">Plano Básico</h2>
+                    <p>Ideal para começar sua jornada.</p>
+                    <p class="text-xl font-semibold text-gray-800 mt-4">R$19,99/mês</p>
+                    <a href="#" class="btn btn-primary mt-6 w-full py-2 text-sm rounded-full">Assine Agora</a>
+                </div>
+
+                <!-- Plano Profissional -->
+                <div class="card w-full bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800">Plano Profissional</h2>
+                    <p>Para empresas em crescimento.</p>
+                    <p class="text-xl font-semibold text-gray-800 mt-4">R$49,99/mês</p>
+                    <a href="#" class="btn btn-primary mt-6 w-full py-2 text-sm rounded-full">Assine Agora</a>
+                </div>
+
+                <!-- Plano Empresarial -->
+                <div class="card w-full bg-white shadow-lg rounded-lg p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800">Plano Empresarial</h2>
+                    <p>Para grandes equipes e soluções completas.</p>
+                    <p class="text-xl font-semibold text-gray-800 mt-4">R$99,99/mês</p>
+                    <a href="#" class="btn btn-primary mt-6 w-full py-2 text-sm rounded-full">Assine Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-base-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-semibold text-gray-800">Entre em Contato</h2>
+            <p class="mt-4 text-lg text-gray-600">Fale conosco para mais informações sobre nossos workshops e eventos.</p>
+            <form class="mt-8 max-w-lg mx-auto">
+                <input type="text" class="input input-bordered w-full mb-4" placeholder="Seu Nome">
+                <input type="email" class="input input-bordered w-full mb-4" placeholder="Seu Email">
+                <textarea class="textarea textarea-bordered w-full mb-4" placeholder="Sua Mensagem"></textarea>
+                <button type="submit" class="btn btn-primary w-full py-2 text-sm rounded-full">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-base-200 text-center py-6">
+        <p class="text-gray-600">&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+  
+  
+  </body>
+  
+  
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
