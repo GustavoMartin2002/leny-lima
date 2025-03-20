@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductComponent {
   @Input() imageSrc: string = '';
+  @Input() href: string = '';
 }
