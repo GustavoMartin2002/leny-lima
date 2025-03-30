@@ -1,0 +1,20 @@
+<div class="w-full my-10">
+    <div class="payment-card m-auto w-[540px] px-5 py-20">
+        <div class="mb-12">
+            <h5 class="text-2xl text-center uppercase font-normal">Investimento de</h5>
+            <h5 [textContent]="value_through" class="text-2xl text-center line-through font-bold"></h5>
+        </div>
+        
+        <h5 class="text-2xl text-center uppercase font-normal mb-12">Por apenas</h5>
+        
+        <div class="flex flex-col items-center relative">
+            <p class="text-lg font-bold absolute left-17 bottom-30">12x de</p>
+            <div class="flex items-end">
+                <span class="text-3xl font-bold mb-2">R$</span><span [textContent]="parcel_value" class="text-8xl font-bold"></span>
+            </div>
+            <p [textContent]="cash_value" class="pt-1 font-bold"></p>
+        </div>
+        <app-btn-vaga [link]="payment_link"/>
+    </div>
+    <p [textContent]="encounters" class="text-xl text-center font-bold py-2 uppercase"></p>
+</div>

@@ -1,0 +1,14 @@
+.mini-card {
+    height: 264px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 4px solid #FF9E03;
+    color: white;
+    background: rgba(217, 217, 217, 0.00);
+}
+
+.mini-card p {
+    font-style: normal;
+    font-weight: 800;
+    line-height: 141%; /* 29.61px */
+}

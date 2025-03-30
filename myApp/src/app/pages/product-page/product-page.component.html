@@ -1,0 +1,120 @@
+@if (product) {
+    <div class="flex flex-col justify-center align-center">
+        <section>
+            <app-video videoSrc="amanhecer.mp4"/>
+            <app-btn-vaga link="https://pay.kiwify.com.br/jciH1R3"/>
+            <app-text 
+                classText="text-white text-justify mx-[25%]"
+                text="Você sente que padrões repetitivos e crenças limitantes estão te impedindo de avançar? Está pronta(o) para uma transformação profunda e consistente? A Mentoria Amanhecer é para quem deseja romper barreiras internas, fortalecer sua confiança e construir um novo caminho com clareza e propósito."
+            />
+        </section>
+        
+        <section>
+            <app-title 
+                classTitle="text-4xl text-[#FF9E03] font-bold" 
+                title="O QUE VAMOS TRABALHAR"
+            />
+            <div class="mx-[15%] flex flex-wrap justify-center items-center gap-30">
+                <app-module 
+                    imgModule="module1.png" 
+                    [textList]="['a','b', 'c', 'd']"
+                />
+                <app-module 
+                    imgModule="module2.png" 
+                    [textList]="['a','b', 'c', 'd']"
+                />
+                <app-module 
+                    imgModule="module3.png" 
+                    [textList]="['a','b', 'c', 'd']"
+                />
+            </div>
+            <app-title 
+                classTitle="text-4xl text-white font-bold" 
+                title="BONUS EXCLUSIVO"
+            />
+            <div class="mx-[15%] flex flex-wrap justify-center items-center gap-30">   
+                <app-card-bonus
+                    imgCard="card1.png" 
+                    title="Gestão do Tempo e Disciplina"
+                    text="Organize sua rotina para produtividade máxima"
+                />
+
+                <app-card-bonus
+                    imgCard="card2.png" 
+                    title="Inteligência Emocional e Networking"
+                    text="Relacionamentos estratégicos e equilíbrio emocional"
+                />
+
+                <app-card-bonus
+                    imgCard="card3.png" 
+                    title="Direcionamento para Empreendedorismo"
+                    text="Dicas práticas para alavancar sua carreira ou negócio"
+                />
+            </div>
+            <app-title 
+                classTitle="text-white text-3xl" 
+                title="BÔNUS DE 2 SESSAO DIAGNÓSTICO NO FINAL DO 5 ENCONTROS"
+            />
+            <app-btn-vaga link="https://pay.kiwify.com.br/jciH1R3"/>
+        </section>
+
+        <section>
+            <app-title
+                classTitle="text-[#FF9E03] text-4xl font-bold"
+                title="O QUE VAMOS TRABALHAR NESSA FASE"
+            />
+            <app-text
+                classText="text-white text-justify mx-[25%]"
+                text="Aqui, o foco será no desenvolvimento das habilidades que surgem a partir do reconhecimento do seu verdadeiro potencial, explorando forças, talentos e paixões, para criar uma nova visão sobre o que é possível alcançar na vida. Esse é o momento de reconstruir a confiança e se alinhar com o que realmente motiva e energiza."
+            />
+            <div class="mx-[15%] flex flex-wrap gap-10 justify-center items-center">
+                <app-mini-card 
+                    text="Autoconhecimento profundo: Explorando talentos, forças internas e paixões pessoais." 
+                />
+                <app-mini-card 
+                    text="Construção de uma nova visão: Desenvolver uma perspectiva clara sobre suas intenções e objetivos, criando um plano realista para alcançá-los." 
+                />
+                <app-mini-card 
+                    text="Fortalecimento da confiança e poder pessoal: Ajudar a solidificar a autoestima e confiança, ampliando a capacidade de se posicionar com clareza e assertividade na vida." 
+                />
+            </div>
+        </section>
+
+        <section>
+            
+                <app-mentor 
+                    mentor="mentor.png" 
+                    text="Leny Lima é uma empreendedora e mentora de desenvolvimento pessoal e profissional com vasta experiência nas áreas de enfermagem e empoderamento feminino. Sua trajetória é marcada pelo compromisso em ajudar mulheres a alcançarem seu pleno potencial, promovendo mudanças significativas em suas vidas." 
+                />
+            
+        </section>
+        <app-payment-card 
+            value_through="R$XXXX,XX" 
+            parcel_value="205,20" 
+            cash_value="ou R$ 2052,00 à vista"
+            encounters="(5 ENCONTROS)"
+            />
+    </div>
+} @else {
+    <div class="w-full h-screen flex justify-center align-center">
+        <div 
+            role="alert" 
+            class="alert alert-error m-auto"
+        >
+            <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 shrink-0 stroke-current" 
+                fill="none" 
+                viewBox="0 0 24 24"
+            >
+                <path 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    stroke-width="2" 
+                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" 
+                />
+            </svg>
+            <span>Erro! Não foi possivel encontrar o Produto.</span>
+            </div>
+    </div>
+}

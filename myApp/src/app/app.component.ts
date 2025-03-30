@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./header/header.component";
-import { FeaturedTitleComponent } from "./featured-title/featured-title.component";
-import { ProductListComponent } from "./product-list/product-list.component";
-import { FooterComponent } from "./footer/footer.component";
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from "./templates/footer/footer.component";
+import { NavComponent } from "./templates/nav/nav.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FeaturedTitleComponent, ProductListComponent, FooterComponent],
+  imports: [CommonModule, RouterModule, FooterComponent, NavComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
