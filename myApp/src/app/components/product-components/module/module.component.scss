@@ -5,3 +5,9 @@
     border: 1px solid #FF9E03;
     background: #000;
 }
+
+@media(max-width:375px) {
+    .module {
+        height: 570px;
+    }
+}

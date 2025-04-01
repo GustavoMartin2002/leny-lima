@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-mentor',
@@ -7,6 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './mentor.component.scss'
 })
 export class MentorComponent {
- @Input() mentor!: string
- @Input() text!: string
+
 }

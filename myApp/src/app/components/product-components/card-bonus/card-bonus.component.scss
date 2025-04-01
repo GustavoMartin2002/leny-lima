@@ -1,6 +1,5 @@
 .card {
     height: 486px;
-    flex-shrink: 0;
     border-radius: 10px;
     border: 1px solid #FF9E03;
     background: #000;
@@ -10,7 +9,7 @@
     text-align: center;
     font-style: normal;
     font-weight: 700;
-    line-height: 70%; /* 10.5px */
+    line-height: 100%; /* 10.5px */
 }
 
 .text {

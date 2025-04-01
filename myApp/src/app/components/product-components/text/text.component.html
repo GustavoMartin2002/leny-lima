@@ -1,3 +1,8 @@
 <div class="my-10" [ngClass]="classText">
-    <p class="text text-2xl "  [textContent]="text"></p>
+    <p 
+        [textContent]="text"
+        class="text text-2xl
+            max-2xl:text-xl max-xl:text-lg max-lg:text-base max-md:text-sm"
+    >
+    </p>
 </div>

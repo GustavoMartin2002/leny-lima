@@ -1,6 +1,6 @@
-<div class="module w-[360px] flex flex-col justify-start items-start p-4 my-10">
-    <img [src]="imgModule" alt="modulo" class="mx-auto mt-[30px] mb-[30px]">
-    <div *ngFor="let text of textList" class="flex gap-2 items-center text-center pb-5">
+<div class="module w-[360px] flex flex-col justify-start items-start p-4 my-5 max-[375px]:w-[300px]">
+    <img [src]="imgModule" alt="modulo" class="mx-auto mt-[20px] mb-[30px] max-[375px]:w-[90%]">
+    <div *ngFor="let text of textList" class="flex gap-2 items-center text-start pb-5">
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="13" 
@@ -8,12 +8,12 @@
             viewBox="0 0 13 12" 
             fill="none"
         >
-            <path 
+            <path
                 d="M1 5.68293L6.50933 10.3659L12.2941 1"
                 stroke="#FCA90C" 
                 stroke-width="1.10187"
             />
         </svg>
-        <p [textContent]="text" class="text-white"></p>
+        <p [textContent]="text" class="text-white text-sm"></p>
     </div>
 </div>

@@ -1,4 +1,3 @@
-import { products } from '../../components/home-components/product-list/products';
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
