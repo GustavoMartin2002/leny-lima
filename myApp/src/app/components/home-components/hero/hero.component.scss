@@ -12,3 +12,39 @@
     font-weight: 700;
     line-height: 192%;
 }
+
+// animations
+
+// fade in right
+@keyframes animationRight {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.motionRight {
+    animation: animationRight 2s ease 0s 1 normal forwards;
+}
+
+// fade in left
+@keyframes animationLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.motionLeft {
+    animation: animationLeft 2s ease 0s 1 normal forwards;
+}

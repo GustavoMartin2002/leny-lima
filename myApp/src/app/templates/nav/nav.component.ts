@@ -9,9 +9,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './nav.component.scss'
 })
 export class NavComponent implements OnInit{
-  skeleton: string = 'skeleton rounded-xl'
+  isLoading: boolean = true
 
   ngOnInit(): void {
-    this.skeleton = ''
+    this.isLoading = false
   }
 }

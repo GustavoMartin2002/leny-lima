@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Product } from '../../components/home-components/product/product.model';
+import { Product } from '../../data/models/product.model';
 import { ProductService } from '../../services/product.service';
 import { VideoComponent } from "../../components/product-components/video/video.component";
 import { BtnVagaComponent } from "../../components/product-components/btn-vaga/btn-vaga.component";
@@ -20,12 +20,14 @@ import { MentorComponent } from "../../components/product-components/mentor/ment
   styleUrl: './product-page.component.scss'
 })
 export class ProductPageComponent implements OnInit{
+  isLoading: boolean = true
   product: Product | undefined
   productService = inject(ProductService)
 
   constructor(private router: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.isLoading = false
     const id = this.router.snapshot.paramMap.get('id')
     this.product = this.productService.getById(id)
   }

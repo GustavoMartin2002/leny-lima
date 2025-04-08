@@ -1,5 +1,5 @@
-<div class="module w-[360px] flex flex-col justify-start items-start p-4 my-5 max-[375px]:w-[300px]">
-    <img [src]="imgModule" alt="modulo" class="mx-auto mt-[20px] mb-[30px] max-[375px]:w-[90%]">
+<div class="module w-[360px] flex flex-col justify-start items-start p-4 my-5 max-[375px]:w-[300px]" [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
+    <img [src]="imgModule" alt="modulo" class="mx-auto mt-[20px] mb-[30px] max-[375px]:w-[90%]" width="300" height="300">
     <div *ngFor="let text of textList" class="flex gap-2 items-center text-start pb-5">
         <svg 
             xmlns="http://www.w3.org/2000/svg" 

@@ -9,9 +9,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  skeleton: string = 'skeleton rounded-xl'
+  isLoading: boolean = true
 
   ngOnInit(): void {
-    this.skeleton = ''
+    this.isLoading = false
   }
 }

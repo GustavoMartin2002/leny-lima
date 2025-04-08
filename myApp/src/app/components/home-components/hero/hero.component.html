@@ -2,40 +2,41 @@
     <div class="w-[50%] max-lg:hidden">
         <img
             src="img-hero.png"
-            class="max-w-sm"
-            [ngClass]="skeleton"
+            alt="hero"
+            width="400"
+            height="100"
         />
     </div>
     <div class="w-[100%] flex flex-col justify-center align-center pr-20 max-lg:pr-0 max-lg:w-[90%] max-lg:py-10">
-        <div id="topic-1" class="topics-hero text-2xl max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="skeleton">
+        <div id="topic-1" class="topics-hero text-2xl motionRight max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
             <h1 class="text-color">1. Desbloquear Seu Potencial Interior</h1>
             <p>Liberte-se de crenças limitantes e descubra a força que existe dentro de você.</p>
         </div>
 
         <br>
 
-        <div id="topic-2" class="topics-hero text-2xl max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="skeleton">
+        <div id="topic-2" class="topics-hero text-2xl motionLeft max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
             <h1 class="text-color">2. Gerenciar Suas Emoções</h1>
             <p>Aprenda a reconhecer e lidar com os sabotadores emocionais que podem minar sua energia e foco.</p>
         </div>
 
         <br>
 
-        <div id="topic-3" class="topics-hero text-2xl max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="skeleton">
+        <div id="topic-3" class="topics-hero text-2xl motionRight max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
             <h1 class="text-color">3. Construir Hábitos Positivos</h1>
             <p>Desenvolva rotinas e habilidades que fortalecerão seu negócio e promoverão seu crescimento pessoal.</p>
         </div>
 
         <br>
 
-        <div id="topic-4" class="topics-hero text-2xl max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="skeleton">
+        <div id="topic-4" class="topics-hero text-2xl motionLeft max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
             <h1 class="text-color">4. Equilibrar Maternidade e Carreira</h1>
             <p>Encontre harmonia entre suas responsabilidades como mãe e empreendedora, cultivando uma vida plena e satisfatória.</p>
         </div>
 
         <br>
 
-        <div id="topic-5" class="topics-hero text-2xl max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="skeleton">
+        <div id="topic-5" class="topics-hero text-2xl motionRight max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
             <h1 class="text-color">5. Criar uma Mentalidade de Abundância</h1>
             <p>Transforme sua visão de mundo e abra-se para novas oportunidades e prosperidade.</p>
         </div>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-module',
@@ -7,7 +7,12 @@ import { Component, Input } from '@angular/core';
   templateUrl: './module.component.html',
   styleUrl: './module.component.scss'
 })
-export class ModuleComponent {
+export class ModuleComponent implements OnInit{
+  isLoading: boolean = true
   @Input() imgModule!: string
   @Input() textList!: string[]
+
+  ngOnInit(): void {
+    this.isLoading = false
+  }
 }

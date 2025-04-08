@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -9,11 +9,11 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './product.component.scss'
 })
 export class ProductComponent implements OnInit{
+  isLoading: boolean = true
   @Input() imageSrc: string = '';
   @Input() rout!: any;
-  skeleton: string = 'skeleton rounded-xl';
   
   ngOnInit(): void {
-    this.skeleton = '';
+    this.isLoading = false
   }
 }

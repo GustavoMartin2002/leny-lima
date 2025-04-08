@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent implements OnInit{
-  skeleton: string = 'skeleton rounded-xl';
+  isLoading:boolean = true
 
   ngOnInit(): void {
-    this.skeleton = ''
+    this.isLoading = false
   }
 }

@@ -1,7 +1,7 @@
 <div class="w-full my-10">
-    <div class="payment-card m-auto px-5 py-20 w-[540px] max-sm:w-[85%]">
+    <div class="payment-card m-auto px-5 py-20 w-[540px] max-sm:w-[85%]" [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
         <div class="mb-12 text-2xl text-center max-sm:text-xl">
-            <h5 class="uppercase font-normal">Investimento de</h5>
+            <h4 class="uppercase font-normal">Investimento de</h4>
             <h5 [textContent]="value_through" class=" line-through font-bold"></h5>
         </div>
         

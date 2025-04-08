@@ -5,7 +5,7 @@
             <app-btn-vaga [link]="product.link"/>
             <app-text 
                 [text]="product.text1"
-                classText="text-white text-justify mx-[25%] 
+                classText="text-white text-justify mx-[25%] motionBasic
                     max-2xl:mx-[20%] max-xl:mx-[15%] max-lg:mx-[10%] max-md:mx-[5%]"
             />
         </section>
@@ -13,46 +13,54 @@
         <section>
             <app-title 
                 title="O QUE VAMOS TRABALHAR"
-                classTitle="text-4xl text-[#FF9E03] font-bold mx-[5%]
-                            max-lg:text-3xl max-sm:text-xl" 
+                classTitle="text-4xl text-[#FF9E03] font-bold mx-[5%] py-5 motionBasic
+                            max-lg:text-3xl max-sm:text-xl"
+                [ngClass]="isLoading ? 'skeleton rounded-xl' : ''"
             />
-            <div class="flex flex-wrap justify-center items-center gap-30 mx-[1%]
+            <div class="flex flex-wrap justify-center items-center gap-30 mx-[1%] 
                         max-2xl:gap-15 max-xl:gap-10 max-sm:gap-0"
             >
-                <app-module 
+                <app-module
+                    class="motionBasic"
                     [imgModule]="product.module[0].photo" 
                     [textList]="[product.module[0].topic1, product.module[0].topic2, product.module[0].topic3]"
                 />
-                <app-module 
+                <app-module
+                    class="motionBasic"
                     [imgModule]="product.module[1].photo" 
                     [textList]="[product.module[1].topic1, product.module[1].topic2, product.module[1].topic3]"
                 />
                 <app-module 
+                    class="motionBasic"
                     [imgModule]="product.module[2].photo" 
                     [textList]="[product.module[2].topic1, product.module[2].topic2, product.module[2].topic3]"
                 />
             </div>
             <app-title 
                 title="BONUS EXCLUSIVO"
-                classTitle="text-4xl text-white font-bold mx-[5%]
-                            max-lg:text-3xl max-sm:text-xl" 
+                classTitle="text-4xl text-white font-bold mx-[5%] py-5 motionBasic
+                            max-lg:text-3xl max-sm:text-xl"
+                [ngClass]="isLoading ? 'skeleton rounded-xl' : ''"
             />
             <div class="mx-[1%] flex flex-wrap justify-center items-center gap-30
                         max-2xl:gap-15 max-xl:gap-10 max-sm:gap-5"
             >   
                 <app-card-bonus
+                    class="motionBasic"
                     [imgCard]="product.bonus[0].photo" 
                     [title]="product.bonus[0].title"
                     [text]="product.bonus[0].text"
                 />
 
                 <app-card-bonus
+                    class="motionBasic"
                     [imgCard]="product.bonus[1].photo" 
                     [title]="product.bonus[1].title"
                     [text]="product.bonus[1].text"
                 />
 
                 <app-card-bonus
+                    class="motionBasic"
                     [imgCard]="product.bonus[2].photo" 
                     [title]="product.bonus[2].title"
                     [text]="product.bonus[2].text"
@@ -60,40 +68,49 @@
             </div>
             <app-title 
                 title="BÔNUS DE 2 SESSAO DIAGNÓSTICO NO FINAL DO 5 ENCONTROS"
-                classTitle="text-white text-3xl mx-[10%] mt-0
-                            max-xl:text-lg max-md:text-sm" 
+                classTitle="text-white text-3xl mx-[10%] mt-0 py-5 motionBasic
+                            max-xl:text-lg max-md:text-sm"
+                [ngClass]="isLoading ? 'skeleton rounded-xl' : ''"
             />
-            <app-btn-vaga [link]="product.link"/>
+            <app-btn-vaga 
+                class="motionBasic"
+                [link]="product.link"
+            />
         </section>
 
         <section>
             <app-title
                 title="O QUE VAMOS TRABALHAR NESSA FASE"
-                classTitle="text-[#FF9E03] text-4xl font-bold mx-[5%] 
+                classTitle="text-[#FF9E03] text-4xl font-bold mx-[5%] py-5 motionBasic
                             max-lg:text-2xl max-sm:text-xl"
+                [ngClass]="isLoading ? 'skeleton rounded-xl' : ''"
             />
             <app-text
-                classText="text-white text-justify mx-[25%]
+                classText="text-white text-justify mx-[25%] motionBasic
                         max-xl:mx-[20%] max-md:mx-[10%]"
                 [text]="product.text2"
             />
             <div class="mx-[1%] flex flex-wrap justify-center items-center gap-10">
-                <app-mini-card 
+                <app-mini-card
+                    class="motionBasic"
                     [text]="product.cubes[0].text" 
                 />
-                <app-mini-card 
+                <app-mini-card
+                    class="motionBasic"
                     [text]="product.cubes[1].text" 
                 />
-                <app-mini-card 
+                <app-mini-card
+                    class="motionBasic"
                     [text]="product.cubes[2].text" 
                 />
             </div>
         </section>
 
-        <section>
+        <section class="motionBasic">
             <app-mentor/>
         </section>
-        <app-payment-card 
+        <app-payment-card
+            class="motionBasic"
             [value_through]="product.payment.value_through"
             [parcel_value]="product.payment.parcel_value" 
             [cash_value]="product.payment.cash_value"

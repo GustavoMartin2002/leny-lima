@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './featured-title.component.scss'
 })
 export class FeaturedTitleComponent implements OnInit{
-  skeleton: string = 'skeleton rounded-xl';
+  isLoading: boolean = true
   
   ngOnInit(): void {
-    this.skeleton = ''
+    this.isLoading = false
   }
 }

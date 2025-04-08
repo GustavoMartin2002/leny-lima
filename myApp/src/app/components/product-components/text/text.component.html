@@ -3,6 +3,7 @@
         [textContent]="text"
         class="text text-2xl
             max-2xl:text-xl max-xl:text-lg max-lg:text-base max-md:text-sm"
+        [ngClass]="isLoading ? 'skeleton rounded-xl' : ''"
     >
     </p>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from "./templates/footer/footer.component";
@@ -11,5 +11,5 @@ import { NavComponent } from "./templates/nav/nav.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'myApp';
+
 }

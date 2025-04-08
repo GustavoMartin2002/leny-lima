@@ -1,3 +1,3 @@
-<div class="product mx-auto w-[80%]" [ngClass]="skeleton">
-    <a [routerLink]="rout"><img *ngIf="imageSrc" [src]="imageSrc" alt="Product Image"></a>
+<div class="product mx-auto w-[80%]" [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
+    <a [routerLink]="rout"><img *ngIf="imageSrc" [src]="imageSrc" alt="Product Image" width="100%" height="100%"></a>
 </div>

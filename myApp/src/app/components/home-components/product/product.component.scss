@@ -1,7 +1,7 @@
-@keyframes product-animation {
+@keyframes productAnimation {
 	0% {
 		opacity: 0;
-		transform: translateY(50px);
+		transform: translateY(100px);
 	}
 
 	100% {
@@ -11,5 +11,7 @@
 }
 
 .product{
-    animation: product-animation 2s ease 0s 1 normal;
+    animation: productAnimation 2s ease 0s 1 normal;
+	animation-timeline: view();
+	animation-range: entry 0% cover 80%;
 }

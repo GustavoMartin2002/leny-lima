@@ -1,5 +1,5 @@
 import { CommonModule, NgClass } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-title',
@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './title.component.html',
   styleUrl: './title.component.scss'
 })
-export class TitleComponent {
+export class TitleComponent{
   @Input() title!: string
-  @Input() classTitle!: string 
+  @Input() classTitle!: string
 }
