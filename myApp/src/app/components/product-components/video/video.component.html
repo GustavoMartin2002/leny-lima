@@ -1,5 +1,12 @@
-<div class="my-20 mx-auto">
-    <video class="m-auto w-[50%] max-2xl:w-[60%] max-xl:w-[70%] max-lg:w-[80%] max-md:w-[90%]" controls [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
+<div class="h-full my-20 mx-auto">
+    <video 
+        [ngClass]="isLoading ? 'skeleton rounded-xl' : ''"
+        class="m-auto max-2xl:w-[60%] max-xl:w-[70%] max-lg:w-[80%] max-md:w-[90%]" 
+        width="50%"
+        height="0"
+        controls
+        preload="none"
+    >
         <source [src]="videoSrc" type="video/mp4">
     </video>
 </div>

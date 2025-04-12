@@ -6,10 +6,7 @@ import { products } from '../data/constants/products';
   providedIn: 'root'
 })
 export class ProductService {
-
-  constructor() {}
-
-  getById(id: any): Product | undefined {
+  getById(id: string | null): Product | undefined {
     return products.find(product => product.id === id)
   }
 }
