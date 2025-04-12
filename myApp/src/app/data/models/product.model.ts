@@ -15,8 +15,14 @@ export interface Product {
         title: string
         text: string
     }[];
+    podCast: {
+        img: string
+        text1: string
+        text2: string
+    }
     text2: string
-    cubes: {
+    timeline: {
+        title: string,
         text: string
     }[]
     payment: {

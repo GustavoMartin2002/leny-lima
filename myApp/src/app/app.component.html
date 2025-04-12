@@ -1,7 +1,12 @@
-<div>
+<div 
+    [ngClass]="{
+        bgHome: currentRoute === '/',
+        bgProduct: currentRoute.includes('/produto') 
+    }"
+>
     <app-nav/>
-    <main>
-        <router-outlet/>
+    <main class="min-h-screen">
+        <router-outlet />
     </main>
     <app-footer/>
 </div>

@@ -1,13 +1,22 @@
-@import "tailwindcss";
+@use "tailwindcss";
 @plugin "daisyui" {
     themes: black --default;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: url("../public/background.png") ;
-    background-size: cover;
     min-height: 100vh;
+    scroll-behavior: smooth;
+}
+
+body .bgHome {
+    background: url("../public/background.webp") ;
+    background-size: cover;
+}
+
+body .bgProduct {
+    background: url("../public/background-product.webp") ;
+    background-size: cover;
 }
 
 a {
@@ -23,7 +32,7 @@ a {
 
 @keyframes scaleUpCenter {
 	0% {
-		transform: scale(0.5);
+		transform: scale(0.75);
 	}
 
 	100% {
@@ -32,7 +41,9 @@ a {
 }
 
 .motionBasic {
-    animation: scaleUpCenter 2s ease 0s 1 normal forwards;
+    transform: scale(0.75);
+    animation: scaleUpCenter 1s normal;
     animation-timeline: view();
-    animation-range: entry 0%;
+    animation-range-start: entry;
 }
+

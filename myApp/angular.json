@@ -17,6 +17,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "optimization": {
+              "scripts": true,
+              "styles": {
+                "minify": true,
+                "inlineCritical": true
+              },
+              "fonts": true
+            },
+            "aot": true,
             "outputPath": "dist/my-app",
             "index": "src/index.html",
             "browser": "src/main.ts",

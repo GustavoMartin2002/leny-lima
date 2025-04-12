@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MiniCardComponent } from './mini-card.component';
+import { CardPodcastComponent } from './card-podcast.component';
 
-describe('MiniCardComponent', () => {
-  let component: MiniCardComponent;
-  let fixture: ComponentFixture<MiniCardComponent>;
+describe('CardPodcastComponent', () => {
+  let component: CardPodcastComponent;
+  let fixture: ComponentFixture<CardPodcastComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MiniCardComponent]
+      imports: [CardPodcastComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MiniCardComponent);
+    fixture = TestBed.createComponent(CardPodcastComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

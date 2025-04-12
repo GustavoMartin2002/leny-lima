@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-featured-title',
   imports: [CommonModule],
   templateUrl: './featured-title.component.html',
-  styleUrl: './featured-title.component.scss'
+  styleUrl: './featured-title.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeaturedTitleComponent implements OnInit{
   isLoading: boolean = true
