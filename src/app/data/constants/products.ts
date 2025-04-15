@@ -67,7 +67,7 @@ export const products: Product[] = [
         ],
         payment: {
             value_through: 'R$5999,99',
-            parcel_value: '205,20',
+            parcel_value: '212,22',
             cash_value: 'ou R$ 2052,00 à vista',
             encounters: '(6 ENCONTROS)'
         }
