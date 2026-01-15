@@ -43,3 +43,6 @@ Thumbs.db
 
 # vercel
 .vercel
+
+# dotenv
+.env
