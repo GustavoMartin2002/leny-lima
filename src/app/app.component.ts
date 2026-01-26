@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   title = 'Leny Lima';
   loading: boolean = true;
   currentRoute = '';
-  
+
   constructor(private route: Router){};
 
   ngOnInit(): void {
