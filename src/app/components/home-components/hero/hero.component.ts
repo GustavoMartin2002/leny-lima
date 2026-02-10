@@ -1,18 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { AccordionComponent } from "../accordion/accordion.component";
+import { Component } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-hero',
-  imports: [CommonModule, AccordionComponent],
+  standalone: true,
+  imports: [NgOptimizedImage, RouterLink],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeroComponent implements OnInit{
-  isLoading:boolean = true
 
-  ngOnInit(): void {
-    this.isLoading = false
-  }
+export class HeroComponent {
+
 }
