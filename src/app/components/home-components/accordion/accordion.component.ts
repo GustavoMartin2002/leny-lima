@@ -1,19 +1,15 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-accordion',
-  imports: [CommonModule],
+  standalone: true,
   templateUrl: './accordion.component.html',
   styleUrl: './accordion.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AccordionComponent implements OnInit{
-  isLoading: boolean = true
-  @Input() title?: string
-  @Input() text?: string
-  
-  ngOnInit(): void {
-    this.isLoading = false
-  }
+
+export class AccordionComponent {
+  @Input() title?: string;
+  @Input() text?: string;
+
+  protected readonly uniqueId = `accordion-${Math.random().toString(36).substring(2, 9)}`;
 }
