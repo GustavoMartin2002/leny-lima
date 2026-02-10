@@ -81,15 +81,20 @@ export const products: ProductModel[] = [
             },
             {
                 title: "Networking de Elite",
-                text: "Ingresso garantido para a Imersão 2026 (Presencial/Online)",
+                text: "Networking com outras mulheres que estão na mesma frequência",
             },
         ],
         deliverables: [
             { text: "6 meses de Mentoria em Grupo (Encontros Semanais)" },
             { text: "6 meses de Bônus de Suporte (Total: 1 ano)" },
             { text: "1 Sessão VIP Individual com Leny Lima" },
-            { text: "Planner Físico Florescer 2026 enviado para sua casa" },
+            { text: "Acesso a aulas gravadas sobre Posicionamento, Mentalidade e Estratégia Digital" },
+            { text: "Planners e exercícios de autoconhecimento para aplicar no dia a dia" },
         ],
+        headline: {
+            title: "O seu próximo nível exige uma nova versão de você!",
+            text: "Você pode continuar tentando sozinha, batendo cabeça e duvidando de si mesma, ou entrar para um ambiente que não vai te deixar desistir. O solo está fértil, as sementes estão na sua mão. Só falta você decidir florescer!",
+        },
         payment: {
             anchor_price: "5.000,00",
             currency: "R$",

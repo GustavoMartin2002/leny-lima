@@ -25,6 +25,10 @@ export default interface ProductModel {
     deliverables: {
         text: string;
     }[];
+    headline?: {
+        title: string;
+        text: string;
+    };
     payment: {
         anchor_price?: string;
         currency: string;
