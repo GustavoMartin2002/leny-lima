@@ -1,0 +1,44 @@
+<div 
+  [ngClass]="product.active ? '' : 'select-none pointer-events-none'"
+  class="m-auto card bg-base-100 w-96 h-[500px] shadow-sm border border-base-200 max-[430px]:w-[100%] max-sm:h-[475px]"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="80"
+    height="80"
+    fill="currentColor"
+    viewBox="0 0 16 16"
+    class="text-black"
+    [ngClass]="product.active ? 'hidden' : 'z-10 opacity-90 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'"
+  >
+    <path fill-rule="evenodd" d="M8 0a4 4 0 0 1 4 4v2.05a2.5 2.5 0 0 1 2 2.45v5a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 2 13.5v-5a2.5 2.5 0 0 1 2-2.45V4a4 4 0 0 1 4-4m0 1a3 3 0 0 0-3 3v2h6V4a3 3 0 0 0-3-3"/>
+  </svg>
+
+  <figure>
+    <img
+      [ngSrc]="product.photos[0]"
+      [ngClass]="product.active ? 'filter-[grayscale(0)]' : 'filter-[grayscale(1)]'"
+      class="object-cover select-none pointer-events-none rounded-t-lg"
+      width="380"
+      height="240"
+      alt="Imagem da mentoria"
+      loading="lazy"
+    >
+  </figure>
+
+  <div class="card-body">
+    <h4 class="card-title max-sm:text-base">{{product.name}}</h4>
+    <p class="text-base max-sm:text-sm">{{product.resume}}</p>
+    <div class="card-actions justify-end">
+      <button
+        class="btn w-full max-sm:btn-sm"
+        [ngClass]="product.active ? 'btn-primary' : 'btn-base-300 select-none pointer-events-none'"
+        (click)="modal.showModal()"
+        [disabled]="!product.active"
+      >
+        Saiba mais
+      </button>
+      <app-mentoring-modal [product]="product" #modal/>
+    </div>
+  </div>
+</div>
