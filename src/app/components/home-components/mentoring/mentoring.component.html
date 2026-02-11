@@ -1,0 +1,7 @@
+<div class="m-auto bg-base-100 px-10 py-25 min-h-[50vh] max-sm:px-5 max-sm:py-20">
+  <h3 class="text-3xl text-center font-semibold uppercase mb-25 max-lg:text-2xl max-md:text-xl max-sm:text-lg">Mentorias</h3>
+
+  <div class="flex flex-wrap justify-center items-center gap-15">
+    <app-mentoring-card *ngFor="let product of products" [product]="product"/>
+  </div>
+</div>
