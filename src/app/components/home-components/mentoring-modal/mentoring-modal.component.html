@@ -1,0 +1,146 @@
+<dialog *ngIf="product.active === true" class="modal z-[100]" #dialog>
+  <div class="modal-box rounded-sm p-0 max-w-4xl max-h-[95vh] max-sm:max-h-[95vh]">
+    <form method="dialog" class="relative z-10">
+      <button class="btn btn-sm btn-base-100 btn-circle absolute right-3 top-5">X</button>
+    </form>
+
+    <figure class="relative w-full h-full bg-accent">
+      <h3 class="absolute text-5xl text-primary text-center text-shadow-[0_0_10px_#FF9E03] font-bold z-10 max-xl:text-4xl max-lg:text-3xl max-md:text-2xl">
+        {{ product.name }}
+      </h3>
+
+      <img
+        [ngSrc]="product.photos[1]"
+        class="object-cover object-center opacity-60 select-none pointer-events-none"
+        width="900"
+        height="400"
+        alt="Capa da mentoria"
+        loading="lazy"
+      />
+    </figure>
+
+    <div class="flex flex-col gap-10 p-10 max-sm:p-5">
+      <div>
+        <h4 class="text-xl font-bold mb-1 max-sm:text-lg">Sobre</h4>
+        <p *ngFor="let description of product.description" class="text-justify text-base mt-2 max-sm:text-sm">{{ description }}</p>
+      </div>
+
+      <div *ngIf="product.timeline.length">
+        <h4 class="text-xl font-bold mb-1 max-sm:text-lg">Jornada</h4>
+
+        <ul class="flex justify-center items-center gap-10 max-[840px]:flex-col">
+          <li *ngFor="let timeline of product.timeline">
+            <div class="w-48 flex flex-col items-center gap-4 p-4 rounded-sm">
+              <img
+                [ngSrc]="timeline.icon || 'default.svg'"
+                class="w-16 h-16 text-primary select-none pointer-events-none"
+                width="48"
+                height="48"
+                alt="ícone da etapa"
+                loading="lazy"
+              />
+              <h5 class="text-base font-semibold max-sm:text-sm">{{ timeline.title }}</h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="product.modules.length">
+        <h4 class="text-xl font-bold mb-2 max-sm:text-lg">Módulos</h4>
+
+        <div class="join join-vertical w-full">
+          <div
+            class="collapse collapse-arrow join-item border border-base-300"
+            *ngFor="let mod of product.modules; let i = index"
+          >
+            <input
+              type="radio"
+              [id]="product.id + '-module-' + i"
+              [name]="product.id + '-modules'"
+              [checked]="i === 0"
+              [attr.aria-label]="mod.title"
+            />
+
+            <h5 *ngIf="mod.title" class="text-base font-semibold collapse-title max-sm:text-sm">
+              {{ mod.title }}
+            </h5>
+
+            <ul class="collapse-content space-y-1">
+              <li *ngFor="let topic of mod.topics" class="text-base list-disc list-inside max-sm:text-sm">
+                {{ topic }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-xl font-bold mb-1 max-sm:text-lg">Metodologia</h4>
+        <ul class="list-disc list-inside space-y-2">
+          <li *ngFor="let method of product.methodology">
+            <span class="text-base font-semibold max-sm:text-sm">{{ method.title }}: </span>
+            <span class="text-base max-sm:text-sm">{{ method.text }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="product.bonus?.length">
+        <h4 class="text-xl font-bold mb-2 max-sm:text-lg">Bônus Exclusivos</h4>
+
+        <ul class="list-disc list-inside space-y-2">
+          <li *ngFor="let bonus of product.bonus" class="text-base max-sm:text-sm">
+            <span class="font-semibold">{{ bonus.title }}</span>: {{ bonus.text }}
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-xl font-bold mb-2 max-sm:text-lg">Entregas</h4>
+
+        <ul class="list-disc list-inside space-y-2">
+          <li *ngFor="let deliverable of product.deliverables" class="font-semibold text-base max-sm:text-sm">
+            {{ deliverable.text }}
+          </li>
+        </ul>
+      </div>
+
+      <div *ngIf="product.headline">
+        <h4 class="text-center text-primary text-shadow-[0.5px_0.5px_1px_#000] text-2xl font-bold mb-2 max-sm:text-lg">
+          {{ product.headline.title }}
+        </h4>
+
+        <p class="text-justify text-base mt-2 max-sm:text-sm">{{ product.headline.text }}</p>
+      </div>
+
+      <div class="card bg-base-200 border-1 border-base-300 rounded-md shadow-sm" *ngIf="product.payment">
+        <div class="card-body p-5">
+          <h4 class="text-xl text-center uppercase font-bold mb-2 max-sm:text-lg">Investimento</h4>
+
+          <div class="flex flex-col items-center select-none">
+            <span class="text-base line-through">{{ product.payment.anchor_price }}</span>
+            <span class="text-5xl text-primary text-shadow-[1px_1px_1px_#000000] font-bold max-sm:text-3xl">
+              <span class="text-base text-accent text-shadow-[0_0_0] font-normal select-none">{{ product.payment.value_through }}x de</span>
+              {{ product.payment.parcel_value }}
+              <span class="text-base text-accent text-shadow-[0_0_0] font-normal select-none">/mês</span>
+            </span>
+            <span class="text-lg mt-1 font-semibold max-sm:text-base">ou {{product.payment.currency}} {{ product.payment.cash_value }} à vista!</span>
+
+            <div class="flex flex-col justify-center items-center gap-3 mt-5 uppercase text-sm font-semibold">
+              <span class="badge badge-primary" *ngIf="product.details.duration">{{ product.details.duration }}</span>
+              <span class="badge badge-primary" *ngIf="product.details.format">{{ product.details.format }}</span>
+              <span class="badge badge-primary" *ngIf="product.details.encounters">{{ product.details.encounters }}</span>
+              <span class="badge badge-primary" *ngIf="product.details.guarantee">{{ product.details.guarantee }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-action flex items-center gap-2 px-10 pb-10 max-sm:px-5 max-sm:pb-5 max-sm:justify-center">
+      <a [href]="product.link" target="_blank" class="btn btn-primary max-sm:btn-sm">Garantir minha vaga</a>
+      <form method="dialog" class="flex gap-2">
+        <button class="btn btn-base-300 max-sm:btn-sm">Fechar</button>
+      </form>
+    </div>
+  </div>
+</dialog>
