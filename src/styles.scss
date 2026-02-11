@@ -1,50 +1,52 @@
 @use "tailwindcss";
 @plugin "daisyui" {
-    themes: black --default;
+	themes: bumblebee --default;
+}
+
+html{
+	scroll-behavior: smooth;
+	scrollbar-color: #433f3a #d4d4d4;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    min-height: 100vh;
-    scroll-behavior: smooth;
-    background-size: cover;
-}
-
-body .bgHome {
-    background: url("../public/background.webp") ;
-    background-size: cover;
-}
-
-body .bgProduct {
-    background: url("../public/background-product.webp") ;
-    background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	min-height: 100dvh;
 }
 
 a {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .text-color {
-    color: #FF9E03;
+	color: #FF9E03;
 }
 
 // animation
 // basic motion
-
-@keyframes scaleUpCenter {
+@keyframes entrance {
 	0% {
-		transform: scale(0.75);
+		opacity: 0;
 	}
 
 	100% {
-		transform: scale(1);
+		opacity: 1;
 	}
 }
 
-.motionBasic {
-    transform: scale(0.75);
-    animation: scaleUpCenter 1s normal;
-    animation-timeline: view();
-    animation-range-start: entry;
+@keyframes exit {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
 }
 
+.entranceAnimation {
+	animation: entrance 2s ease 0s 1 normal forwards;
+}
+
+.exitAnimation {
+	animation: exit 2s ease 0s 1 normal forwards;
+}

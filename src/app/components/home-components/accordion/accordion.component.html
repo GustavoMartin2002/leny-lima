@@ -1,5 +1,6 @@
-<div tabindex="0" class="collapse collapse-arrow bg-stone-950 border border-zinc-900" [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
-    <input name="check" type="checkbox" />
-    <h1 class="collapse-title font-bold text-color text-2xl max-xl:text-xl max-md:text-lg max-sm:text-sm" [textContent]="title"></h1>
-    <p class="collapse-content font-medium text-white text-sm text-xl max-xl:text-lg max-md:text-base max-sm:text-xs" [textContent]="text"></p>
+<div class="collapse collapse-arrow bg-base-100 border-1 border-base-300 rounded-xl w-full">
+    <label [for]="uniqueId" class="hidden"></label>
+    <input type="checkbox" [name]="uniqueId" [id]="uniqueId" aria-label="input checkbox" />
+    <h4 class="collapse-title font-semibold text-base max-sm:text-sm" [textContent]="title"></h4>
+    <p class="collapse-content text-neutral text-base max-sm:text-sm" [textContent]="text"></p>
 </div>

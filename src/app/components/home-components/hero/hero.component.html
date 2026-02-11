@@ -1,53 +1,31 @@
-<div class="h-[900px] flex justify-center align-center max-md:h-full">
-    <div class="w-[50%] max-lg:hidden">
+<div class="hero bg-base-200 min-h-screen relative">
+    <img
+        ngSrc="bg-hero.webp"
+        class="object-cover object-center pointer-events-none select-none z-1"
+        alt="Fundo da seção hero"
+        priority
+        fill
+    />
+
+    <div class="flex flex-row-reverse justify-center items-center z-10 max-md:flex-col max-md:items-start">
         <img
-            src="img-hero.webp"
-            alt="hero"
-            width="400px"
-            height="0"
-            loading="lazy"
-            fetchpriority="high"
-        />
-    </div>
-    <div class="w-[100%] m-auto flex flex-col justify-center align-center pr-20 max-lg:pr-0 max-lg:w-[90%] max-lg:py-10">
-        <!-- <div id="topic-1" class="topics-hero text-2xl motionRight max-xl:text-xl max-md:text-lg max-sm:text-sm" [ngClass]="isLoading ? 'skeleton rounded-xl' : ''">
-            <h1 class="text-color">1. Desbloquear Seu Potencial Interior</h1>
-            <p>Liberte-se de crenças limitantes e descubra a força que existe dentro de você.</p>
-        </div> -->
-
-        <app-accordion 
-            class="topics-hero motionRight"
-            title="1. Desbloquear Seu Potencial Interior"    
-            text="Liberte-se de crenças limitantes e descubra a força que existe dentro de você." 
-        />
-        <br>
-
-        <app-accordion 
-            class="topics-hero motionLeft"
-            title="2. Gerenciar Suas Emoções"    
-            text="Aprenda a reconhecer e lidar com os sabotadores emocionais que podem minar sua energia e foco." 
-        />
-        <br>
-
-        <app-accordion 
-            class="topics-hero motionRight"
-            title="3. Construir Hábitos Positivos"    
-            text="Desenvolva rotinas e habilidades que fortalecerão seu negócio e promoverão seu crescimento pessoal." 
-        />
-        <br>
-
-        <app-accordion 
-            class="topics-hero motionLeft"
-            title="4. Equilibrar Maternidade e Carreira"    
-            text="Encontre harmonia entre suas responsabilidades como mãe e empreendedora, cultivando uma vida plena e satisfatória." 
+            ngSrc="profile.webp"
+            class="m-auto rounded-full shadow-xl/30 w-[400px] h-[400px] object-cover object-center select-none pointer-events-none max-[1360px]:w-[250px] max-[1360px]:h-[250px] max-md:w-[200px] max-md:h-[200px] max-md:mb-5"
+            width="400"
+            height="400"
+            alt="Foto de perfil"
+            priority
         />
 
-        <br>
+        <div class="w-[50%] mx-auto max-md:text-center max-[1360px]:w-[60%] max-md:w-[95%]">
+            <h1 class="text-5xl text-primary font-bold uppercase text-shadow-[0.5px_0.5px_2px_#000] max-[1360px]:text-4xl max-lg:text-3xl max-md:text-2xl max-md:mt-5 max-sm:text-xl">Transforme sua vida!</h1>
 
-        <app-accordion 
-            class="topics-hero motionRight"
-            title="5. Criar uma Mentalidade de Abundância"    
-            text="Transforme sua visão de mundo e abra-se para novas oportunidades e prosperidade." 
-        />
+            <h2 class="text-3xl font-light my-4 text-shadow-lg max-[1360px]:text-2xl max-lg:text-xl max-md:text-lg max-md:mt-0 max-md:mb-5 max-sm:text-base">Liberte-se de crenças limitantes e descubra seu verdadeiro potencial.</h2>
+
+            <div class="flex gap-4 w-full max-md:flex-col max-md:mt-5">
+                <a routerLink="/" fragment="mentorias" class="btn btn-lg btn-primary rounded-full shadow-lg w-1/3 max-[1360px]:btn-md max-lg:btn-sm max-md:w-full">Saber Mais</a>
+                <a routerLink="/" fragment="contato" class="btn btn-lg btn-accent text-white rounded-full shadow-lg w-1/4 max-[1360px]:btn-md max-lg:btn-sm max-md:w-full">Contato</a>
+            </div>
+        </div>
     </div>
 </div>

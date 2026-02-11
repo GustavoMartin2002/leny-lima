@@ -1,17 +1,14 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [CommonModule],
+  imports: [RouterLink, NgOptimizedImage],
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.scss'
 })
-export class NavComponent implements OnInit{
-  isLoading: boolean = true
 
-  ngOnInit(): void {
-    this.isLoading = false
-  }
+export class NavComponent {
+
 }

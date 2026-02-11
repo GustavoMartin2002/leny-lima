@@ -1,12 +1,11 @@
-<div 
-    [ngClass]="{
-        bgHome: currentRoute === '/',
-        bgProduct: currentRoute.includes('/produto') 
-    }"
->
+@if (loading === true) {
+    <div class="flex justify-center items-center h-screen m-auto entranceAnimation">
+        <span class="loading loading-spinner loading-xl"></span>
+    </div>
+} @else {
     <app-nav/>
-    <main class="min-h-screen">
-        <router-outlet />
+    <main class="min-h-screen entranceAnimation">
+        <router-outlet/>
     </main>
     <app-footer/>
-</div>
+}

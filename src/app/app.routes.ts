@@ -5,12 +5,6 @@ export const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
-        pathMatch: 'full'
-        // loadChildren: () => import ('./modules/lazy-home/lazy-home.module').then(m => m.LazyHomeModule)
+        pathMatch: 'full',
     },
-    {
-        path: 'produto/:id',
-        loadChildren: () => import ('./modules/lazy-product/lazy-product.module').then(m => m.LazyProductModule)
-    }
 ];
-

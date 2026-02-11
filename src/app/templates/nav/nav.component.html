@@ -1,5 +1,50 @@
-<div class="navbar bg-transparent flex justify-center align-center py-5">
-  <a href="" class="btn btn-ghost p-7 rounded-full text-center max-sm:p-5" [ngClass]="isLoading ? 'skeleton rounded-full' : ''"> 
-      <img class="max-sm:w-[50px]" src="logo.webp" alt="logo"  width="75" height="0">
-  </a>
-</div>
+<nav class="navbar py-5 bg-base-100 drop-shadow-xl z-20">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <button tabindex="0" role="button" aria-label="Menu" class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+        </svg>
+      </button>
+
+      <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-7 w-52 p-2 shadow gap-1">
+        <li>
+          <a routerLink="/" fragment="inicio" class="text-sm">Início</a>
+        </li>
+
+        <li>
+          <a routerLink="/" fragment="sobre" class="text-sm">Sobre</a>
+        </li>
+
+        <li>
+          <a routerLink="/" fragment="mentorias" class="text-sm">Mentorias</a>
+        </li>
+
+        <li>
+          <a routerLink="/" fragment="historico" class="text-sm">Histórico</a>
+        </li>
+
+        <li>
+          <a routerLink="/" fragment="contato" class="text-sm">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="navbar-center">
+    <a routerLink="/" class="btn btn-ghost rounded-full px-0 py-6">
+      <img
+        class="w-12"
+        ngSrc="logo.webp"
+        width="48"
+        height="48"
+        alt="logo"
+        priority
+      >
+    </a>
+  </div>
+
+  <div class="navbar-end">
+    <a routerLink="/" fragment="contato" class=" btn btn-primary rounded-full box-shadow mr-1 max-sm:btn-sm">Contato</a>
+  </div>
+</nav>
