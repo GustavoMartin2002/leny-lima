@@ -3,13 +3,13 @@
   "short_name": "Leny Lima",
   "icons": [
     {
-      "src": "/web-app-manifest-192x192.webp",
+      "src": "web-app-manifest-192x192.webp",
       "sizes": "192x192",
       "type": "image/webp",
       "purpose": "maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.webp",
+      "src": "web-app-manifest-512x512.webp",
       "sizes": "512x512",
       "type": "image/webp",
       "purpose": "maskable"
