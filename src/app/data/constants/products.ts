@@ -85,8 +85,8 @@ export const products: ProductModel[] = [
             },
         ],
         deliverables: [
-            { text: "6 meses de Mentoria em Grupo (Encontros Semanais)" },
-            { text: "6 meses de Bônus de Suporte (Total: 1 ano)" },
+            { text: "3 meses de Mentoria em Grupo (Encontros Semanais)" },
+            { text: "3 meses de Bônus de Suporte (Total: 6 meses)" },
             { text: "1 Sessão VIP Individual com Leny Lima" },
             { text: "Acesso a aulas gravadas sobre Posicionamento, Mentalidade e Estratégia Digital" },
             { text: "Planners e exercícios de autoconhecimento para aplicar no dia a dia" },
@@ -96,14 +96,14 @@ export const products: ProductModel[] = [
             text: "Você pode continuar tentando sozinha, batendo cabeça e duvidando de si mesma, ou entrar para um ambiente que não vai te deixar desistir. O solo está fértil, as sementes estão na sua mão. Só falta você decidir florescer!",
         },
         payment: {
-            anchor_price: "5.000,00",
+            anchor_price: "11.870,99",
             currency: "R$",
             value_through: "12",
             parcel_value: "382,36",
             cash_value: "3.697,00",
         },
         details: {
-            duration: "1 Ano de Acompanhamento",
+            duration: "6 meses de Acompanhamento",
             format: "Aulas Ao Vivo + Gravadas",
             encounters: "Encontros Semanais",
             guarantee: "Garantia de 7 dias",
