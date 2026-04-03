@@ -1,14 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import {
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  Router,
+  RouterModule,
+} from '@angular/router';
 import { NavComponent } from "./templates/nav/nav.component";
 import { FooterComponent } from "./templates/footer/footer.component";
+import { CookieConsentComponent } from "./components/cookie-consent/cookie-consent.component";
 import { filter } from 'rxjs/operators';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule, NavComponent, FooterComponent],
+  imports: [CommonModule, RouterModule, NavComponent, FooterComponent, CookieConsentComponent],
   templateUrl: './app.component.html',
 })
 
