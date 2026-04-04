@@ -5,14 +5,38 @@ import {
   writeResponseToNodeResponse,
 } from '@angular/ssr/node';
 import express from 'express';
+import helmet from 'helmet';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import generateSitemapXml from './generateSitemap';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
 
 const app = express();
-const angularApp = new AngularNodeAppEngine();
+
+// Segurança usando Helmet
+// CSP desabilitado para permitir scripts inline do Angular
+app.use(helmet({ contentSecurityPolicy: false }));
+
+app.use('/sitemap.xml', (req, res) => {
+  try {
+    const sitemap = generateSitemapXml(process.env['NG_APP_PUBLIC_URL']);
+    res.setHeader('Content-Type', 'application/xml');
+    res.send(sitemap);
+  } catch (error) {
+    console.error('Error generating sitemap:', error);
+    res.status(500).send('Error generating sitemap');
+  }
+});
+
+const angularApp = new AngularNodeAppEngine({
+  allowedHosts: [
+    "localhost",
+    `${process.env['NG_APP_HOST']}`,
+    `*.${process.env['NG_APP_HOST']}`,
+  ]
+});
 
 app.use(
   express.static(browserDistFolder, {
