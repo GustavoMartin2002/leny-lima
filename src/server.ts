@@ -30,7 +30,13 @@ app.use('/sitemap.xml', (req, res) => {
   }
 });
 
-const angularApp = new AngularNodeAppEngine();
+const angularApp = new AngularNodeAppEngine({
+  allowedHosts: [
+    "localhost",
+    `${process.env['NG_APP_HOST']}`,
+    `*.${process.env['NG_APP_HOST']}`,
+  ]
+});
 
 app.use(
   express.static(browserDistFolder, {
