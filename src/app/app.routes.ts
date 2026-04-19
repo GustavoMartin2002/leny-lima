@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PoliticaPrivacidade } from './pages/politica-de-privacidade/politica-de-privacidade.component';
 import { TermosCondicoes } from './pages/termos-e-condicoes/termos-e-condicoes.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
     {
@@ -40,5 +41,9 @@ export const routes: Routes = [
     {
         path: 'termos-e-condicoes',
         component: TermosCondicoes,
+    },
+    {
+        path: '**',
+        component: NotFoundComponent,
     },
 ];
