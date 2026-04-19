@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "preinstall": "npm audit --audit-level=high",
-    "prebuild": "npm audit --audit-level=high",
+    "prebuild": "node generate-sitemap.mjs && npm audit --audit-level=high",
     "ng": "node -r dotenv/config ./node_modules/@angular/cli/bin/ng.js",
     "start": "node -r dotenv/config ./node_modules/@angular/cli/bin/ng.js serve",
     "build": "node -r dotenv/config ./node_modules/@angular/cli/bin/ng.js build",
