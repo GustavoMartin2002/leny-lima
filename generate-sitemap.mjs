@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const baseUrl = process.env['NG_APP_PUBLIC_URL'] || 'https://lenylima.vercel.app';
+const baseUrl = process.env['NG_APP_PUBLIC_URL'] || 'https://lenylima.com.br';
 const routes = [
   '/',
   '/inicio',

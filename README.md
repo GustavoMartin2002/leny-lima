@@ -14,6 +14,7 @@ Este é o repositório oficial da aplicação web **Leny Lima**, um website dedi
 - **[DaisyUI](https://daisyui.com/)**: Biblioteca de componentes para TailwindCSS que agiliza o desenvolvimento de interfaces elegantes.
 - **[Express](https://expressjs.com/)**: Servidor Node.js utilizado para servir a aplicação SSR.
 - **Vercel**: Plataforma de hospedagem e deployment otimizada para frontend.
+- **[PNPM](https://pnpm.io/)**: Gerenciador de pacotes rápido, eficiente e utilizado no projeto.
 
 ### ✨ Funcionalidades Principais
 - **Renderização Híbrida (SSR + Client)**: O conteúdo inicial é renderizado no servidor para indexação rápida por motores de busca, enquanto a interatividade é assumida pelo cliente (hidratação).

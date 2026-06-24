@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://lenylima.vercel.app/sitemap.xml
+Sitemap: https://lenylima.com.br/sitemap.xml
