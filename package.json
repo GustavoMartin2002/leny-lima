@@ -1,9 +1,18 @@
 {
   "name": "leny-lima",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gustavolimalx/leny-lima"
+  },
+  "packageManager": "pnpm@11.6.0",
+  "engines": {
+    "node": "22.x",
+    "pnpm": "11.x"
+  },
   "scripts": {
-    "preinstall": "npm audit --audit-level=high",
-    "prebuild": "node generate-sitemap.mjs && npm audit --audit-level=high",
+    "preinstall": "pnpm audit --audit-level=high",
+    "prebuild": "node generate-sitemap.mjs && pnpm audit --audit-level=high",
     "ng": "node -r dotenv/config ./node_modules/@angular/cli/bin/ng.js",
     "start": "node -r dotenv/config ./node_modules/@angular/cli/bin/ng.js serve",
     "build": "node -r dotenv/config ./node_modules/@angular/cli/bin/ng.js build",
