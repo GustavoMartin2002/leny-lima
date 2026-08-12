@@ -13,6 +13,7 @@ const routes = [
   '/historico',
   '/contato',
   '/florescer_premium',
+  '/florescer_start',
   '/politica-de-privacidade',
   '/termos-e-condicoes',
 ];

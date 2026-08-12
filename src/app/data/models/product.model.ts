@@ -5,6 +5,8 @@ export default interface ProductModel {
     resume: string;
     photos: string[];
     link: string;
+    isInternalLink?: boolean;
+    internalRoute?: string;
     description: string[];
     timeline: {
         icon?: string;

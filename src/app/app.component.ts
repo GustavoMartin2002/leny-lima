@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.route.events
       .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe((event: any) => {
+      .subscribe((event: NavigationEnd) => {
         this.currentRoute = event.urlAfterRedirects;
       });
   }

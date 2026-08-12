@@ -50,3 +50,106 @@ a {
 .exitAnimation {
 	animation: exit 2s ease 0s 1 normal forwards;
 }
+
+@theme {
+  --color-fs-on-primary-fixed-variant: #5c4300;
+  --color-fs-surface-bright: #f9f9f9;
+  --color-fs-tertiary-container: #d3a74a;
+  --color-fs-deep-onyx: #000000;
+  --color-fs-surface-container-highest: #e2e2e2;
+  --color-fs-on-tertiary: #ffffff;
+  --color-fs-primary-fixed: #ffdea0;
+  --color-fs-inverse-on-surface: #f0f1f1;
+  --color-fs-surface-container-high: #e8e8e8;
+  --color-fs-muted-gold: #C69A3F;
+  --color-fs-on-tertiary-container: #553d00;
+  --color-fs-on-primary-fixed: #261900;
+  --color-fs-on-secondary-container: #785217;
+  --color-fs-on-surface-variant: #4f4634;
+  --color-fs-on-primary: #ffffff;
+  --color-fs-surface-dim: #dadada;
+  --color-fs-surface-tint: #795900;
+  --color-fs-outline: #817662;
+  --color-fs-on-background: #1a1c1c;
+  --color-fs-background: #f9f9f9;
+  --color-fs-primary-container: #daa520;
+  --color-fs-secondary-fixed-dim: #f1be78;
+  --color-fs-on-tertiary-fixed: #261900;
+  --color-fs-inverse-primary: #f6be3b;
+  --color-fs-inverse-surface: #2f3131;
+  --color-fs-on-secondary-fixed-variant: #624003;
+  --color-fs-tertiary-fixed-dim: #eec060;
+  --color-fs-on-primary-container: #553d00;
+  --color-fs-primary: #795900;
+  --color-fs-on-secondary: #ffffff;
+  --color-fs-on-surface: #1a1c1c;
+  --color-fs-on-error: #ffffff;
+  --color-fs-secondary: #7d571b;
+  --color-fs-tertiary: #7a5900;
+  --color-fs-on-error-container: #93000a;
+  --color-fs-surface-container-lowest: #ffffff;
+  --color-fs-outline-variant: #d3c5ae;
+  --color-fs-surface-container: #eeeeee;
+  --color-fs-surface: #f9f9f9;
+  --color-fs-secondary-container: #fdc982;
+  --color-fs-secondary-fixed: #ffddb3;
+  --color-fs-surface-variant: #e2e2e2;
+  --color-fs-soft-sand: #F2F2F2;
+  --color-fs-on-tertiary-fixed-variant: #5c4200;
+  --color-fs-primary-fixed-dim: #f6be3b;
+  --color-fs-on-secondary-fixed: #291800;
+  --color-fs-error: #ba1a1a;
+  --color-fs-surface-container-low: #f3f3f4;
+  --color-fs-tertiary-fixed: #ffdea2;
+  --color-fs-error-container: #ffdad6;
+
+  --font-fs-label-caps: "Montserrat", sans-serif;
+  --font-fs-headline-xl: "Montserrat", sans-serif;
+  --font-fs-body-md: "Montserrat", sans-serif;
+  --font-fs-button: "Montserrat", sans-serif;
+  --font-fs-headline-md: "Montserrat", sans-serif;
+  --font-fs-headline-lg: "Montserrat", sans-serif;
+  --font-fs-body-lg: "Montserrat", sans-serif;
+  --font-fs-headline-xl-mobile: "Montserrat", sans-serif;
+
+  --text-fs-label-caps: 12px;
+  --text-fs-label-caps--line-height: 16px;
+  --text-fs-label-caps--letter-spacing: 0.1em;
+  --text-fs-label-caps--font-weight: 700;
+  
+  --text-fs-headline-xl: 48px;
+  --text-fs-headline-xl--line-height: 56px;
+  --text-fs-headline-xl--letter-spacing: -0.02em;
+  --text-fs-headline-xl--font-weight: 700;
+  
+  --text-fs-body-md: 16px;
+  --text-fs-body-md--line-height: 24px;
+  --text-fs-body-md--font-weight: 400;
+  
+  --text-fs-button: 14px;
+  --text-fs-button--line-height: 20px;
+  --text-fs-button--letter-spacing: 0.05em;
+  --text-fs-button--font-weight: 600;
+  
+  --text-fs-headline-md: 24px;
+  --text-fs-headline-md--line-height: 32px;
+  --text-fs-headline-md--font-weight: 600;
+  
+  --text-fs-headline-lg: 32px;
+  --text-fs-headline-lg--line-height: 40px;
+  --text-fs-headline-lg--font-weight: 600;
+  
+  --text-fs-body-lg: 18px;
+  --text-fs-body-lg--line-height: 28px;
+  --text-fs-body-lg--font-weight: 400;
+  
+  --text-fs-headline-xl-mobile: 36px;
+  --text-fs-headline-xl-mobile--line-height: 42px;
+  --text-fs-headline-xl-mobile--font-weight: 700;
+
+  --spacing-margin-desktop: 64px;
+  --spacing-container-max: 1200px;
+  --spacing-margin-mobile: 20px;
+  --spacing-unit: 8px;
+  --spacing-gutter: 24px;
+}
