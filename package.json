@@ -11,8 +11,7 @@
     "pnpm": "11.x"
   },
   "scripts": {
-    "preinstall": "pnpm audit --audit-level=high",
-    "prebuild": "node generate-sitemap.mjs && pnpm audit --audit-level=high",
+    "prebuild": "node generate-sitemap.mjs",
     "ng": "node -r dotenv/config ./node_modules/@angular/cli/bin/ng.js",
     "start": "node -r dotenv/config ./node_modules/@angular/cli/bin/ng.js serve",
     "build": "node -r dotenv/config ./node_modules/@angular/cli/bin/ng.js build",

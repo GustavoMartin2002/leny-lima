@@ -30,15 +30,29 @@
     <h4 class="card-title max-sm:text-base">{{product.name}}</h4>
     <p class="text-base max-sm:text-sm">{{product.resume}}</p>
     <div class="card-actions justify-end">
-      <button
-        class="btn w-full max-sm:btn-sm"
-        [ngClass]="product.active ? 'btn-primary' : 'btn-base-300 select-none pointer-events-none'"
-        (click)="modal.showModal()"
-        [disabled]="!product.active"
-      >
-        Saiba mais
-      </button>
-      <app-mentoring-modal [product]="product" #modal/>
+      
+      <ng-container *ngIf="product.isInternalLink; else openModalBtn">
+        <a
+          [routerLink]="product.internalRoute"
+          class="btn w-full max-sm:btn-sm"
+          [ngClass]="product.active ? 'btn-primary' : 'btn-base-300 select-none pointer-events-none'"
+        >
+          Saiba mais
+        </a>
+      </ng-container>
+      
+      <ng-template #openModalBtn>
+        <button
+          class="btn w-full max-sm:btn-sm"
+          [ngClass]="product.active ? 'btn-primary' : 'btn-base-300 select-none pointer-events-none'"
+          (click)="modal.showModal()"
+          [disabled]="!product.active"
+        >
+          Saiba mais
+        </button>
+        <app-mentoring-modal [product]="product" #modal/>
+      </ng-template>
+
     </div>
   </div>
 </div>
