@@ -46,3 +46,6 @@ Thumbs.db
 
 # dotenv
 .env
+
+# sitemap
+sitemap.xml

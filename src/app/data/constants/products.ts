@@ -3,7 +3,7 @@ import ProductModel from "../models/product.model";
 export const products: ProductModel[] = [
     {
         id: "florescer_start",
-        active: true, // You can change this to an env var if needed
+        active: true,
         name: "Florescer Start",
         resume: "A Mentoria Florescer Start é o empurrão que faltava para tirar suas ideias do papel com suporte, estratégia e saúde mental.",
         photos: [
@@ -40,7 +40,7 @@ export const products: ProductModel[] = [
             "florescer_premium/card-florescer.webp",
             "florescer_premium/modal-florescer.webp",
         ],
-        link: "https://pay.kiwify.com.br/iCMI8Nr",
+        link: "https://loja.infinitepay.io/gustavo-lima-075/xvq3171-florescer-premium",
         description: [
             "Sejamos honestas, você já sabe que é capaz. Você já tem o conhecimento técnico, mas existe um abismo silencioso que separa a mulher que você sabe que pode ser: O abismo entre o SABER e o FAZER.",
             "O mercado está cheio de eternas estudantes. O resultado? Você estuda, mas não vê a cor do dinheiro e nem o reconhecimento que merece.",
@@ -115,8 +115,8 @@ export const products: ProductModel[] = [
             },
         ],
         deliverables: [
-            { text: "3 meses de Mentoria em Grupo (Encontros Semanais)" },
-            { text: "3 meses de Bônus de Suporte (Total: 6 meses)" },
+            { text: "3 meses de Mentoria em Grupo/Individual (2 Encontros Semanais)" },
+            { text: "Bônus de Suporte" },
             { text: "1 Sessão VIP Individual com Leny Lima" },
             { text: "Acesso a aulas gravadas sobre Posicionamento, Mentalidade e Estratégia Digital" },
             { text: "Planners e exercícios de autoconhecimento para aplicar no dia a dia" },
@@ -126,16 +126,16 @@ export const products: ProductModel[] = [
             text: "Você pode continuar tentando sozinha, batendo cabeça e duvidando de si mesma, ou entrar para um ambiente que não vai te deixar desistir. O solo está fértil, as sementes estão na sua mão. Só falta você decidir florescer!",
         },
         payment: {
-            anchor_price: "11.870,99",
+            anchor_price: "15.997,00",
             currency: "R$",
             value_through: "12",
-            parcel_value: "382,36",
-            cash_value: "3.697,00",
+            parcel_value: "814,57",
+            cash_value: "7.987,00",
         },
         details: {
-            duration: "6 meses de Acompanhamento",
+            duration: "3 meses de Acompanhamento",
             format: "Aulas Ao Vivo + Gravadas",
-            encounters: "Encontros Semanais",
+            encounters: "2 encontros semanais",
             guarantee: "Garantia de 7 dias",
         },
     },
