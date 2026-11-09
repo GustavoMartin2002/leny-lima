@@ -16,9 +16,9 @@ const convertImages = async (dir) => {
       continue;
     }
 
-    const ext = extname(file).toLowerCase();
+    const ext = extname(file);
     
-    if (['.png', '.jpg', '.jpeg'].includes(ext)) {
+    if (['.png', '.jpg', '.jpeg'].includes(ext.toLowerCase())) {
       const fileName = basename(file, ext);
       const newFilePath = join(dir, `${fileName}.webp`);
 
