@@ -3,12 +3,12 @@ import ProductModel from "../models/product.model";
 export const products: ProductModel[] = [
     {
         id: "florescer_start",
-        active: true,
+        active: process.env["NG_APP_FLORESCER_START"] === "true",
         name: "Florescer Start",
         resume: "A Mentoria Florescer Start é o empurrão que faltava para tirar suas ideias do papel com suporte, estratégia e saúde mental.",
         photos: [
-            "/Florescer Start/Card Florescer Start - Leny Lima.png",
-            "/Florescer Start/Card Florescer Start - Leny Lima.png"
+            "florescer_start/card_florescer_start.webp",
+            "florescer_start/card_florescer_start.webp"
         ],
         link: "",
         isInternalLink: true,
